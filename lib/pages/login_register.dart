@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:prova/pages/home.dart';
 import 'package:prova/pages/provaOnda.dart';
-import 'package:wave/wave.dart';
 
 class Registration extends StatefulWidget {
   static const String id = "REGISTRATION";

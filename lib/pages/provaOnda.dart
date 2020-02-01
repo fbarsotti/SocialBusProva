@@ -1,15 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import "package:prova/data_storage/apirutes.dart";
-import 'package:url_launcher/url_launcher.dart';
-import 'package:prova/widget/menu.dart';
+import 'package:prova/widget/app_drawer.dart';
 
 class ProvaOnda extends StatefulWidget {
-    final AuthResult user;
+  final AuthResult user;
   ProvaOnda({Key key, this.user}) : super(key: key);
 
   @override
-  ProvaOndaState createState() =>  ProvaOndaState();
+  ProvaOndaState createState() => ProvaOndaState();
 }
 
 /// Construct a color from a hex code string, of the format #RRGGBB.
@@ -21,7 +19,7 @@ class ProvaOndaState extends State<ProvaOnda> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Menu(),
+      drawer: AppDrawer(),
       appBar: AppBar(
         backgroundColor: hexToColor("#0058A5"),
         title: Row(
@@ -60,4 +58,3 @@ class ProvaOndaState extends State<ProvaOnda> {
     );
   }
 }
-

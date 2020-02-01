@@ -1,12 +1,11 @@
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import "package:prova/data_storage/apirutes.dart";
+import 'package:prova/data/api_route.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PaginaBus extends StatefulWidget {
-    final AuthResult user; 
-    final List<APIRoute> bus;
+  final AuthResult user;
+  final List<APIRoute> bus;
   PaginaBus({Key key, this.user, this.bus}) : super(key: key);
 
   @override
@@ -17,7 +16,7 @@ class _PaginaBusState extends State<PaginaBus> {
   @override
   Widget build(BuildContext context) {
     Size _size = MediaQuery.of(context).size;
-    String nomeBus =widget.bus[0].routeShortName;
+    String nomeBus = widget.bus[0].routeShortName;
     String urlString =
         "http://actv.avmspa.it/sites/default/files/attachments/pdf/UM/U-$nomeBus.pdf";
     return Container(
@@ -62,7 +61,7 @@ class _PaginaBusState extends State<PaginaBus> {
                       Center(
                         child: Container(
                           width: MediaQuery.of(context).size.width * 0.8,
-                          child:Text("caio"),
+                          child: Text("caio"),
                         ),
                       )
                     ],
